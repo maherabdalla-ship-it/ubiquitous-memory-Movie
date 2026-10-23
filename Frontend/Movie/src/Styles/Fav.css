@@ -1,3 +1,7 @@
+.fav-container {
+  flex: 2;
+}
+
 .favorites {
   padding: 2rem;
   width: 100%;
@@ -21,7 +25,7 @@
   max-width: 600px;
 }
 
-.favorites-empty h2 {
+.favorites-empty h2{
   margin-bottom: 1rem;
   font-size: 2rem;
   color: #e50914;
@@ -31,6 +35,54 @@
   color: #999;
   font-size: 1.2rem;
   line-height: 1.6;
+}
+
+.dislike {
+  padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dislike h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.dislike-empty h2{
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #e50914;
+}
+
+.dislike-empty p {
+  color: #999;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.favorites .movies-grid{
+  row-gap: 5rem;
+}
+.dislike .movies-grid{
+  row-gap: 5rem;
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.comment-btn {
+  position: absolute;
+  margin-top: 1rem;
+  width: 100%;
 }
 
 

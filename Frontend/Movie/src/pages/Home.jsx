@@ -2,6 +2,12 @@ import MovieCard from "../components/MovieCard"
 import { useState, useEffect, use } from "react"
 import { searchMovies, getPopularMovies } from "../Services/api"
 import '../Styles/Home.css'
+ 
+/* Glöm ej 
+
+Lägga till en kommentar knapp inom favorite-sidan
+information från Like button och dislike button ska sparas i en .json fil
+*/
 
 function Home() {
     const [searchQuery, setSerachQuery] = useState("")
@@ -26,7 +32,7 @@ function Home() {
     }, [])
 
     const handelsearch = async (e) => {
-        e.preventDefault();
+        e.preventDefault()
         if (!searchQuery.trim()) return
         if (loading) return
 
@@ -41,8 +47,6 @@ function Home() {
         } finally {
             setLoading(false)
         }
-
-        setSerachQuery("")
     }
     return (
         <div className="home">
@@ -58,13 +62,13 @@ function Home() {
 
                 {error && <div className="error-message">{error}</div>}
 
-            {loading ? <div className="loading">loading . . .</div> :
+            {loading ? (<div className="loading">loading . . .</div> ):(
                 <div className="movies-grid">
                 {movies.map((movie) => (
                     <MovieCard movie={movie} key={movie.id} />
-                ))}
+                    ))}
             </div>
-            }
+             )}
         </div>
     )
 }
